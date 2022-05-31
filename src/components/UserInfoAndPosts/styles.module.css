@@ -1,0 +1,48 @@
+.content {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.name {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.contacts {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.contact {
+    padding: 10px 5px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.post {
+    color: #00000069;
+    width: 300px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}

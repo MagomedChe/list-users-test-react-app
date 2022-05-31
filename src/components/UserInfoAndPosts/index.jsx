@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import style from './styles.module.css';
-import { useGetUsersQuery } from '../../../redux';
-import Posts from './Posts'
+import Posts from './Posts';
+import { useGetUsersQuery } from '../../redux'
 
 function UserInfo(props) {
   const id = parseInt(useParams().id);
@@ -22,11 +22,13 @@ function UserInfo(props) {
                 <div className={style.contact}>{user.company.name}</div>
                 <div className={style.contact}>{user.company.bs}</div>
               </div>
-              <div>3 превью постов<Posts/></div>
             </div>
           );
         }
       })}
+      <div>
+        <Posts />
+      </div>
     </>
   );
 }
