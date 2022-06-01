@@ -4,7 +4,7 @@ import { useGetUsersQuery } from '../../redux'
 
 function Users(props) {
   const { data = [], isLoading } = useGetUsersQuery();
-  if (isLoading) return <h1>Loading users...</h1>;
+  if (isLoading) return <h1>Loading users ...</h1>;
 
   return (
     <>

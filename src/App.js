@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import UserInfo from './components/UserInfoAndPosts';
 import Comments from './components/Comments';
-import NotPages from './components/Comments/NonPages'
 
 function App() {
   return (

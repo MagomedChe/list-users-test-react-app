@@ -1,3 +1,51 @@
-.name {
-
+.content {
+    font-family: 'Open Sans', sans-serif;
+    border: solid;
+    margin-bottom: 15px;
 }
+
+.post {
+    border-bottom: solid;
+    padding: 10px;
+}
+
+.body {
+    width: 60%;
+    margin: auto;
+}
+
+.comments {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.name {
+    width: 300px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: solid;
+}
+
+.commentsBody {
+    width: 60%;
+    text-align: left;
+}
+
+.inputs {
+    justify-content: space-between;
+}
+
+input {
+    font-size: 15px;
+    padding: 10px 5px;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+

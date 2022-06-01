@@ -28,9 +28,9 @@ function UserInfo(props) {
           );
         }
       })}
-      <div>
+      <>
         <Posts />
-      </div>
+      </>
     </>
   );
 }

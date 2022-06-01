@@ -3,6 +3,15 @@
     margin: 30px auto;
 }
 
+.buttonCollapsed {
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
 .name {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 500;
@@ -32,17 +41,29 @@
     padding: 5px;
     text-decoration: none;
     color: black;
+    height: 60px;
+    /*overflow: auto;*/
+    /*text-overflow: clip;*/
 }
 
 .post {
     color: #00000069;
     width: 300px;
+    height: 100px;
     font-size: 12px;
     font-weight: 400;
+    border: 1px solid black;
 }
 
 .posts {
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
+}
+
+.body {
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
 }

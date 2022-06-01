@@ -3,6 +3,7 @@ import style from './styles.module.css';
 import { useParams } from 'react-router-dom';
 import Post from './Post';
 import { useGetPostsQuery } from '../../redux';
+import Button from '../Comments/Button';
 
 function Posts(props) {
   const id = useParams().id;
@@ -20,16 +21,24 @@ function Posts(props) {
     return <h2>Loading posts ...</h2>;
   }
 
-
   return (
     <>
-      <button
-        onClick={() => {
-          setTogglePosts(!togglePosts);
-        }}
-      >
-        {togglePosts ? 'collaps' : 'all posts'}
-      </button>
+      <div onClick={() => {
+        setTogglePosts(!togglePosts);
+      }}>
+        <Button
+          children={togglePosts ? 'collapsed' : 'all posts'}
+
+        />
+      </div>
+
+      {/*<button className={style.buttonCollapsed}*/}
+      {/*  onClick={() => {*/}
+      {/*    setTogglePosts(!togglePosts);*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  {togglePosts ? 'collapsed' : 'all posts'}*/}
+      {/*</button>*/}
       <div className={style.posts}>
         {posts().map((post) => {
           return <Post post={post} key={post.id} />;
