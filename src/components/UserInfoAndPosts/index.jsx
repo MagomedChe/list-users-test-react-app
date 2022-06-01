@@ -6,11 +6,13 @@ import { useGetUsersQuery } from '../../redux'
 
 function UserInfo(props) {
   const id = parseInt(useParams().id);
-  const { data = [] } = useGetUsersQuery();
+  const { data: users = [] } = useGetUsersQuery();
+
+  console.log(id)
 
   return (
     <>
-      {data.map((user) => {
+      {users.map((user) => {
         if (user.id === id) {
           return (
             <div className={style.content} key={user.id}>

@@ -4,11 +4,8 @@ import { NavLink, useParams } from 'react-router-dom'
 
 function Post({ post }) {
 
-  console.log(post.id)
-
-
   return (
-    <NavLink to='/3'>
+    <NavLink to={`post/${post.id}`}>
       <div className={style.post}>
         <div className={style.title}>{post.title}</div>
         <div className={style.body}>{post.body}</div>

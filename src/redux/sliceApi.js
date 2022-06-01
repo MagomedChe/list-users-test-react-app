@@ -11,7 +11,7 @@ export const sliceApi = createApi({
       query: (id) => `posts?userId=${id}`,
     }),
     getComments: build.query({
-      query: (postId) => `comments`,
+      query: (postId) => `comments?postId=${postId}`,
     }),
   })
 });

@@ -11,9 +11,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Users />} />
-        <Route path="/:id" element={<UserInfo />} />
-        <Route path="/:postId" element={<Comments />} />
-        <Route path="*" component={<NotPages/>}/>
+        <Route path="user/:id" element={<UserInfo />} />
+        <Route path="user/:id/post/:post" element={<Comments />} />
+        <Route path="*" component={<h1>404</h1>}/>
       </Routes>
     </div>
   );

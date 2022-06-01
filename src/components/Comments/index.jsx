@@ -1,24 +1,38 @@
-import React from 'react';
-import { useGetCommentsQuery } from '../../redux';
-import { useParams } from 'react-router-dom'
+import React, { Fragment } from 'react';
+import { useGetCommentsQuery, useGetPostsQuery } from '../../redux';
+import { useParams } from 'react-router-dom';
+import style from '../UserInfoAndPosts/styles.module.css';
 
 function Comments(props) {
-  const { data = [], isLoading } = useGetCommentsQuery();
-  if (isLoading) {
+  const idPost = parseInt(useParams().post);
+  const idUser = useParams().id;
+  const { data: comments = [], isLoading } = useGetCommentsQuery(idPost);
+  const { data: posts = [], isLoading: load } = useGetPostsQuery(idUser);
+
+  if (isLoading || load) {
     return <h1>Loading comments</h1>;
   }
 
-
   return (
     <div>
-      <h1>Комментарии</h1>
-      {data.map((comment) => {
+      <div>
+        {posts.map((post) => {
+          if (post.id === idPost) {
+            return (
+              <Fragment key={post.id}>
+                <h1>{post.title}</h1>
+                <h4>{post.body}</h4>
+              </Fragment>
+            );
+          }
+        })}
+      </div>
+      {comments.map((comment) => {
         return (
-        <div key={comment.id}>
-          <div>{comment.name}</div>
-          <div>{comment.email}</div>
-          <div>{comment.body}</div>
-        </div>
+          <div key={comment.id}>
+            <h3>{comment.name}</h3>
+            <p>{comment.body}</p>
+          </div>
         );
       })}
     </div>

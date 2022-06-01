@@ -5,7 +5,7 @@ import style from './styles.module.css'
 function User ({user}) {
 
   return (
-    <NavLink to={`${user.id}`}>
+    <NavLink to={`user/${user.id}`}>
       <div className={style.user}>
         {user.name}
       </div>
