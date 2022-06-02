@@ -1,6 +1,6 @@
 import React from 'react';
-import User from './User'
-import { useGetUsersQuery } from '../../redux'
+import User from './User';
+import { useGetUsersQuery } from '../../redux';
 
 function Users(props) {
   const { data = [], isLoading } = useGetUsersQuery();
@@ -8,10 +8,10 @@ function Users(props) {
 
   return (
     <>
-    {data.map((user) => {
-      return <User user={user} key={user.id} />
-    })}
-  </>
+      {data.map((user) => {
+        return <User user={user} key={user.id} />;
+      })}
+    </>
   );
 }
 

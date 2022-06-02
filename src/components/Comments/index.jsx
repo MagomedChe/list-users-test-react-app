@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { useGetCommentsQuery, useGetPostsQuery } from '../../redux';
 import { useParams } from 'react-router-dom';
 import style from './styles.module.css';
-import Button from './Button';
+import Button from '../Button/Button';
 import FormAddComment from './FormAddComment';
 
 function Comments(props) {
@@ -17,9 +17,10 @@ function Comments(props) {
   }
 
   const handleOpenForm = (e) => {
+    e.preventDefault();
     setformToSend(!formToSend);
-    e.preventDefault()
-  }
+  };
+
 
   return (
     <>

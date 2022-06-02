@@ -10,9 +10,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Users />} />
-        <Route path="user/:id" element={<UserInfo />} />
-        <Route path="user/:id/post/:post" element={<Comments />} />
-        <Route path="*" component={<h1>404</h1>}/>
+        <Route path=":id" element={<UserInfo />} />
+        <Route path=":id/:post" element={<Comments />} />
       </Routes>
     </div>
   );

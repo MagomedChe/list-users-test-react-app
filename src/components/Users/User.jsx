@@ -1,17 +1,13 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import style from './styles.module.css'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import style from './styles.module.css';
 
-function User ({user}) {
-
+function User({ user }) {
   return (
-    <NavLink to={`user/${user.id}`}>
-      <div className={style.user}>
-        {user.name}
-      </div>
+    <NavLink to={`${user.id}`}>
+      <div className={style.user}>{user.name}</div>
     </NavLink>
-
-  )
+  );
 }
 
-export default User
+export default User;

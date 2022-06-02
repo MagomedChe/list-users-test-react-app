@@ -11,8 +11,8 @@ function Header(props) {
         </div>
       </NavLink>
       <div className={style.buttons}>
-        <button>Версия для слабовидящих</button>
-        <button>Мой профиль</button>
+        <div className={style.header_button}>Версия для слабовидящих</div>
+        <div className={style.header_button}>Мой профиль</div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from './Button';
+import Button from '../Button/Button';
 import style from './styles.module.css';
 import { useAddCommentMutation } from '../../redux'
 import { useParams } from 'react-router-dom'
@@ -59,7 +59,7 @@ function FormAddComment(props) {
           />
         </div>
       </div>
-      <div onClick={handleAddComment}>
+      <div className="button" onClick={handleAddComment}>
         <Button children={'send'} />
       </div>
     </>

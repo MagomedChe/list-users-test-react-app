@@ -2,13 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import style from './styles.module.css';
 import Posts from './Posts';
-import { useGetUsersQuery } from '../../redux'
+import { useGetUsersQuery } from '../../redux';
 
 function UserInfo(props) {
   const id = parseInt(useParams().id);
   const { data: users = [] } = useGetUsersQuery();
 
-  console.log(id)
+  console.log(id);
 
   return (
     <>
