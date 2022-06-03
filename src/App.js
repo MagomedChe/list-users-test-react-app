@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Users />} />
         <Route path=":id" element={<UserInfo />} />
         <Route path=":id/:post" element={<Comments />} />
+        <Route path="*" element={<h1>asdfasdf</h1>} />
       </Routes>
     </div>
   );
